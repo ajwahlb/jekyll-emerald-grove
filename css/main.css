@@ -44,7 +44,7 @@ p {
     font-weight: 300;
     color: #fff;
 }
-h3 {
+h3,h1 {
     font-family: Georgia, "Times New Roman", Times, serif;
     line-height: 1.1;
     color: inherit;
