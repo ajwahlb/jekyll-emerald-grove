@@ -1,6 +1,5 @@
 $(document).ready(function(){
 
-
 	$.ajax({
 		type: 'GET',
 		url: 'https://eg-shows.herokuapp.com/',
@@ -14,9 +13,23 @@ $(document).ready(function(){
 		},
 		success: function (result) {
 			console.log(result);
+			if (result.success) {
+				listShows(result);
+			} else {
+				console.log('Call success, backend error')
+			}
 		},
 		error: function (jqXHR, textStatus, errorThrown) {
-			console.log('There was an error');
+			console.log('Call failed', jqXHR, textStatus, errorThrown);
 		}
 	});
+
 });
+
+function listShows(result) {
+
+	for (i = 0; i < result.upcomingShows; i += 1) {
+		console.log(result.upcomingShows[i]);
+	}
+	
+};
