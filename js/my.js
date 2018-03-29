@@ -13,6 +13,6 @@ $.ajax({
 		console.log(result);
 	},
 	error: function (jqXHR, textStatus, errorThrown) {
-		alertDialog('There was an error');
+		console.log('There was an error');
 	}
 });
