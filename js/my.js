@@ -15,6 +15,7 @@ function listShows(result) {
 			'<div class="venue col"><h3><span style="color:#FF620A">' + venue + '</span>, ' + time + '<br><a href="https://www.facebook.com/events/'+ eventId + '" target="_blank">event page</a></h3></div>' +
 			'<div class="city col-md-3"><p>' + city + ', ' + state + '</p></div>' +
 		'</div>';
+		showsContainer.append(row);
 	}
 
 };
