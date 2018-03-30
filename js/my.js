@@ -6,11 +6,11 @@ function listShows(result) {
 	for (i = 0; i < result.upcomingshows.length; i += 1) {
 		console.log(result.upcomingshows[i]);
 		venue = result.upcomingshows[i].place.name;
-		date = result.upcomingshows[i].place.name;
+		date = moment(result.upcomingshows[i].start_time).format('MM/DD');
 		eventId = result.upcomingshows[i].id
 		city = result.upcomingshows[i].place.location.city;
 		state = result.upcomingshows[i].place.location.state;
-		time = result.upcomingshows[i].start_time;
+		time = moment(result.upcomingshows[i].start_time).format('h:mma');
 		row = '<div class="event row">' +
 			'<div class="date col-md-2"><h3>' + date + '</h3></div>' +
 			'<div class="venue col"><h3><span style="color:#FF620A">' + venue + '</span>, ' + time + '<br><a href="https://www.facebook.com/events/'+ eventId + '" target="_blank">event page</a></h3></div>' +
