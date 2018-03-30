@@ -1,6 +1,6 @@
 function listShows(result) {
 	console.log(result.upcomingshows);
-	for (i = 0; i < result.upcomingshows; i += 1) {
+	for (i = 0; i < result.upcomingshows.length; i += 1) {
 		console.log(result.upcomingshows[i]);
 	}
 
