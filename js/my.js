@@ -1,7 +1,7 @@
 function listShows(result) {
 
-	for (i = 0; i < result.upcomingShows; i += 1) {
-		console.log(result.upcomingShows[i]);
+	for (i = 0; i < result.upcomingshows; i += 1) {
+		console.log(result.upcomingshows[i]);
 	}
 
 };
