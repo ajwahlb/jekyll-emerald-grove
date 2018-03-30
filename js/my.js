@@ -1,3 +1,11 @@
+function listShows(result) {
+
+	for (i = 0; i < result.upcomingShows; i += 1) {
+		console.log(result.upcomingShows[i]);
+	}
+
+};
+
 $(document).ready(function(){
 
 	$.ajax({
@@ -14,6 +22,7 @@ $(document).ready(function(){
 		success: function (result) {
 			console.log(result);
 			if (result.success) {
+				console.log(result.success);
 				listShows(result);
 			} else {
 				console.log('Call success, backend error')
@@ -25,11 +34,3 @@ $(document).ready(function(){
 	});
 
 });
-
-function listShows(result) {
-
-	for (i = 0; i < result.upcomingShows; i += 1) {
-		console.log(result.upcomingShows[i]);
-	}
-	
-};
