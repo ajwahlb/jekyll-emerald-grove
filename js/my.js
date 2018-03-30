@@ -3,7 +3,7 @@ function listShows(result) {
 	var row, venue, date, eventId, city, state, time;
 	var showsContainer = $('#dynamic-shows');
 
-	for (i = result.upcomingshows.length; i >=0; i -= 1) {
+	for (i = result.upcomingshows.length-1; i >=0; i -= 1) {
 		console.log(result.upcomingshows[i]);
 		venue = result.upcomingshows[i].place.name;
 		date = moment(result.upcomingshows[i].start_time).format('MM/DD');
