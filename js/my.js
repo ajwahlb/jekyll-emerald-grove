@@ -1,6 +1,6 @@
 function listShows(result) {
 	console.log(result.upcomingshows);
-	var row, venue, date, eventId, city, state;
+	var row, venue, date, eventId, city, state, time;
 	var showsContainer = $('#dynamic-shows');
 
 	for (i = 0; i < result.upcomingshows.length; i += 1) {
@@ -9,7 +9,8 @@ function listShows(result) {
 		date = result.upcomingshows[i].place.name;
 		eventId = result.upcomingshows[i].id
 		city = result.upcomingshows[i].place.location.city;
-		state = result.upcomingshows[i].start_time;
+		state = result.upcomingshows[i].place.location.state;
+		time = result.upcomingshows[i].start_time;
 		row = '<div class="event row">' +
 			'<div class="date col-md-2"><h3>' + date + '</h3></div>' +
 			'<div class="venue col"><h3><span style="color:#FF620A">' + venue + '</span>, ' + time + '<br><a href="https://www.facebook.com/events/'+ eventId + '" target="_blank">event page</a></h3></div>' +
